@@ -1,15 +1,12 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto17
   build:
     commands:
-      - mvn install
+      - yum update
 artifacts:
   files:
-    - target/cicd-web-project.war
+    - index.html
     - appspec.yml
     - scripts/**/*
   discard-paths: no
